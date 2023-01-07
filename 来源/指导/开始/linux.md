@@ -29,6 +29,16 @@ mkdir ~/bot && cd ~/bot
 kivi init
 ```
 
+如果出现`Kivi:Command Not Found`报错，则可能是npm插件的全局变量出错
+
+你可以使用下述代码临时解决：
+
+```shell
+echo -e "export PATH=$(npm prefix -g)/bin:$PATH" >> ~/.bashrc && source ~/.bashrc
+```
+
+或是使用`npx`指令来使用KiviBot
+
 ## 启动 KiviBot
 
 ```shell
